@@ -1,125 +1,89 @@
-# Compiled Object files, Static and Dynamic libs (Shared Objects)
-*.o
-*.a
-*.so
-
-# Folders
-_obj
-_test
-
-# IntelliJ
-.idea
-.run
-
-# IntelliJ Gateway
-.uuid
-
-# Goland's output filename can not be set manually
-/go_build_*
-/gitea_*
-
-# MS VSCode
-.vscode
-__debug_bin*
-
-# Visual Studio
-/.vs/
-
-# mise version managment tool
-mise.toml
-
-*.cgo1.go
-*.cgo2.c
-_cgo_defun.c
-_cgo_gotypes.go
-_cgo_export.*
-
-_testmain.go
-
-*.exe
-*.test
-*.prof
-*.tsbuildinfo
-
-*coverage.out
-coverage.all
-cpu.out
-
-/modules/migration/bindata.*
-/modules/options/bindata.*
-/modules/public/bindata.*
-/modules/templates/bindata.*
-
-*.db
-*.log
-*.log.*.gz
-
+# Binaries
 /gitea
-/gitea-e2e
 /gitea-vet
-/debug
-/integrations.test
+*.exe
+*.dll
+*.so
+*.dylib
 
-/bin
+# Build output
+/build
 /dist
-/custom/*
-!/custom/conf/app.example.ini
+
+# Go workspace
+/go.work
+/go.work.sum
+
+# Vendor directory (if not committed)
+# /vendor
+
+# Test binary, built with `go test -c`
+*.test
+
+# Test coverage output
+*.out
+coverage.txt
+
+# Dependency directories
+/node_modules
+
+# Frontend build artifacts
+/public/assets/
+/public/js/
+/public/css/
+
+# Generated files
+/modules/options/bindata.go
+/modules/public/bindata.go
+/modules/templates/bindata.go
+
+# Local config and data
+/custom
 /data
 /indexers
 /log
-/public/assets/img/avatar
-/tests/e2e-output
-/tests/integration/gitea-integration-*
-/tests/integration/indexers-*
-/tests/*.ini
-/tests/**/*.git/**/*.sample
-/node_modules
-/.venv
-/yarn.lock
-/yarn-error.log
-/npm-debug.log*
-/.pnpm-store
-/public/assets/.vite
-/public/assets/js
-/public/assets/css
-/public/assets/fonts
-/public/assets/licenses.txt
-/vendor
-/VERSION
-/.air
+/repositories
+/uploads
 
+# App config
+app.ini
+app.ini.bak
 
-# Snapcraft
-/gitea_a*.txt
-snap/.snapcraft/
-parts/
-stage/
-prime/
-*.snap
-*.snap-build
-*_source.tar.bz2
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
 .DS_Store
+Thumbs.db
 
-# nix-direnv generated files
-.direnv/
+# Air live reload
+tmp/
 
-# Make evidence files
-/.make_evidence
+# SQLite database
+*.db
+*.sqlite
+*.sqlite3
 
-# Manpage
-/man
+# Environment files
+.env
+.env.local
+.env.*.local
 
-# Ignore AI/LLM instruction files
-/.claude/
-/.cursorrules
-/.cursor/
-/.goosehints
-/.windsurfrules
-/.github/copilot-instructions.md
-/llms.txt
+# Docker
+.docker/
 
-# Ignore worktrees when working on multiple branches
-.worktrees/
+# Certificates
+*.pem
+*.key
+*.crt
+*.p12
 
-# A Makefile for custom make targets
-Makefile.local
+# Profiling output
+*.prof
+cpu.out
+mem.out
+
+# Fuzz test corpus
+testdata/fuzz/
